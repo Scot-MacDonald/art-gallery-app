@@ -11,4 +11,14 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
   }
+
+  * {
+    list-style: none;
+  }
+
+  ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 `;
