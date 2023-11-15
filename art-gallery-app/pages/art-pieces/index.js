@@ -10,7 +10,7 @@ import ArtPieces from "@/components/ArtPieces/ArtPieces";
 //   );
 // }
 
-export default function test({ data }) {
+export default function ArtPiecesPage({ data }) {
   return (
     <div className="art-pieces-list">
       <ArtPieces pieces={data} />

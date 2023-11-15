@@ -6,7 +6,7 @@ export default function Nav({ pieces }) {
       <ul>
         <li>
           <Link href={"/"}>SpotlightPage</Link>
-          <Link href={"/test"}>art-pieces</Link>
+          <Link href={"/art-pieces"}>art-pieces</Link>
         </li>
       </ul>
     </>

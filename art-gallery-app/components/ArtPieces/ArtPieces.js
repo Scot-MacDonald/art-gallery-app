@@ -7,6 +7,7 @@ export default function ArtPieces({ pieces }) {
       {pieces.map((piece) => {
         return (
           <ArtPiecePreview
+            slug={piece.slug}
             key={piece.slug}
             image={piece.imageSource}
             title={piece.name}
