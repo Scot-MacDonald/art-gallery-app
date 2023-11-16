@@ -5,7 +5,7 @@ import FavoriteButton from "../FavoriteButton/FavoriteButton";
 export default function Spotlight({
   image,
   artist,
-  name,
+  slug,
   isFavorite,
   onToggleFavorite,
 }) {
@@ -16,6 +16,7 @@ export default function Spotlight({
       <FavoriteButton
         isFavorite={isFavorite}
         onToggleFavorite={onToggleFavorite}
+        slug={slug}
       />
     </div>
   );

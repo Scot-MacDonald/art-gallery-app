@@ -44,7 +44,8 @@ export default function SpotlightPage({
             artPiecesInfo.find((piece) => piece.slug === spotlightPiece.slug)
               ?.isFavorite
           }
-          onToggleFavorite={() => onToggleFavorite(spotlightPiece.slug)}
+          onToggleFavorite={onToggleFavorite}
+          slug={spotlightPiece.slug}
         />
       )}
     </>

@@ -1,12 +1,13 @@
 import Image from "next/image";
-const FavoriteButton = ({ isFavorite, onToggleFavorite }) => {
+
+const FavoriteButton = ({ isFavorite, onToggleFavorite, slug }) => {
   return (
     <button
       type="button"
-      onClick={onToggleFavorite}
+      onClick={() => onToggleFavorite(slug)}
       aria-label={isFavorite ? "unlike" : "like"}
     >
-      <img src="/assets/heart.svg" width={40} height={40} alt="" />
+      <Image src={"/assets/heart.svg"} width={40} height={40} alt="" />
     </button>
   );
 };

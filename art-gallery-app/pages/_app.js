@@ -1,11 +1,16 @@
+//imported uselocalstoragestat and using that instead of immer just to get the app to show images line 7, 22
+//also commented out the useimmerlocalstoragestate.js in the lib/hook
+
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import Layout from "../components/layout/layout";
 import { useImmerLocalStorageState } from "../lib/hook/useImmerLocalStorageState.js";
+import useLocalStorageState from "use-local-storage-state";
+
 const fetcher = async (...args) => {
   const response = await fetch(...args);
   if (!response.ok) {
-    throw new Error(`Request with ${JSON.stringify(args)} failed.`);
+    throw new Error(`this sh.. ${JSON.stringify(args)} failed.`);
   }
   return await response.json();
 };
@@ -15,7 +20,7 @@ export default function App({ Component, pageProps }) {
     "https://example-apis.vercel.app/api/art",
     fetcher
   );
-  const [artPiecesInfo, setArtPiecesInfo] = useImmerLocalStorageState(
+  const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState(
     "art-pieces-info",
     { defaultValue: [] }
   );
@@ -34,6 +39,10 @@ export default function App({ Component, pageProps }) {
       setArtPiecesInfo([...artPiecesInfo, { slug, isFavorite: true }]);
     }
   }
+
+  //   if (!data) {
+  //     return;
+  //   }
 
   return (
     <Layout>

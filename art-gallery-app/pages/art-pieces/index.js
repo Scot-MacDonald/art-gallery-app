@@ -11,6 +11,7 @@ import ArtPieces from "@/components/ArtPieces/ArtPieces";
 // }
 
 export default function ArtPiecesPage({ data }) {
+  console.log(data);
   return (
     <div className="art-pieces-list">
       <ArtPieces pieces={data} />
