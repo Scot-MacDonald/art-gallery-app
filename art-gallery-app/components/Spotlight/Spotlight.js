@@ -7,6 +7,7 @@ export default function Spotlight({
   artist,
   isFavorite,
   onToggleFavorite,
+  slug,
 }) {
   return (
     <div className={styles.spotlight}>
@@ -15,6 +16,7 @@ export default function Spotlight({
       <FavortieButton
         isFavorite={isFavorite}
         onToggleFavorite={onToggleFavorite}
+        slug={slug}
       ></FavortieButton>
     </div>
   );
