@@ -1,4 +1,3 @@
-import Nav from "@/components/Nav/nav";
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import RootLayout from "@/components/layout/layout";
