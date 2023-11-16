@@ -11,11 +11,11 @@ export default function SpotlightPage({ data }) {
   }
   random();
   return (
-    <div>
+    <>
       <Spotlight
         image={data[randNumber].imageSource}
         artist={data[randNumber].artist}
       />
-    </div>
+    </>
   );
 }
