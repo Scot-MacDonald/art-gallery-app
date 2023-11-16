@@ -10,15 +10,30 @@ export default createGlobalStyle`
   body {
     margin: 0;
     font-family: system-ui;
+    background:#dedcd0;
   }
 
   * {
     list-style: none;
   }
 
-  ul{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  img {
+    filter: grayscale(100%);
   }
+  
+
+.art-pieces-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
 `;

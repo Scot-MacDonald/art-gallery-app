@@ -1,10 +1,11 @@
 import Image from "next/image";
+import styles from "@/styles/ArtPiecePreview.module.css";
 
 export default function Spotlight({ image, artist, name }) {
   return (
-    <div>
-      <Image src={image} width={600} height={400} name={name}></Image>
-      <h2>{artist}</h2>
+    <div className={styles.spotlight}>
+      <Image src={image} width={600} height={400}></Image>
+      <h2 className={styles.spotlight}>{artist}</h2>
     </div>
   );
 }
