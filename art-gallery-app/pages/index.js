@@ -1,25 +1,3 @@
-// import Spotlight from "../components/Spotlight/Spotlight";
-
-// export default function SpotlightPage({ data }) {
-//   let randNumber = null;
-//   if (!data) {
-//     return;
-//   }
-
-//   function random() {
-//     return (randNumber = Math.floor(Math.random() * data.length));
-//   }
-//   random();
-//   return (
-//     <>
-//       <Spotlight
-//         image={data[randNumber].imageSource}
-//         artist={data[randNumber].artist}
-//       />
-//     </>
-//   );
-// }
-
 import Head from "next/head.js";
 import Spotlight from "../components/Spotlight/Spotlight";
 

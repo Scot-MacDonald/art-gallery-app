@@ -1,11 +1,12 @@
 import Nav from "../Nav/nav";
+import styles from "@/styles/ArtPiecePreview.module.css";
 
 const RootLayout = ({ children }) => {
   return (
     <>
       <Nav />
 
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </>
   );
 };

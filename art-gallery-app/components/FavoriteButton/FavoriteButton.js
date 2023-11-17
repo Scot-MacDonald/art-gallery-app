@@ -1,27 +1,11 @@
-export default function FavoriteButton({
-  isFavorite,
-  onToggleFavorite,
-  positionAbsolute = false,
-}) {
-  const buttonStyles = {
-    position: positionAbsolute ? "absolute" : "static",
-    right: "1rem",
-    top: "1.5rem",
-    zIndex: 1,
+import styles from "@/styles/FavoriteButton.module.css";
 
-    borderRadius: "50%",
-    display: "grid",
-    placeItems: "center",
-    // font-size: "xx-large",
-    border: "none",
-    background: "none",
-  };
-
+export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
   return (
     <button
+      className={styles.favoriteButton}
       type="button"
       onClick={onToggleFavorite}
-      style={buttonStyles}
       aria-label={isFavorite ? "unlike" : "like"}
     >
       {isFavorite ? "❤️" : "🖤"}
