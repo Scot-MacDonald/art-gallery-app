@@ -7,3 +7,11 @@ test("renders an artist name", () => {
   const artist = screen.getByText("Steve Johnson");
   expect(artist).toBeInTheDocument();
 });
+
+test("renders an image of the spotlight art", () => {
+  render(<Spotlight />);
+
+  const spotlightImage = screen.getAllByAltText(
+    "Orange Red and Green Abstract Painting"
+  );
+});
