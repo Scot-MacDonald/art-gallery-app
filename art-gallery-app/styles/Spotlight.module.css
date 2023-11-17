@@ -1,0 +1,18 @@
+/* .article {
+  display: flex;
+  justify-content: center;
+}
+
+.favoriteButton {
+  font-size: 50px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
+.spotlight {
+  display: flex;
+  flex-direction: column;
+}

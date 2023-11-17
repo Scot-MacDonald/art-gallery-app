@@ -21,6 +21,7 @@ export default createGlobalStyle`
     filter: grayscale(100%);
   }
   
+ 
 
 .art-pieces-list{
   display: flex;

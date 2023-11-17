@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 5px solid black;
+  margin-bottom: 40px;
+}
+.nav a {
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+}
