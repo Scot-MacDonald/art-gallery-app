@@ -11,22 +11,22 @@ export default function ArtPieceDetailsPage({
   const router = useRouter();
   const { slug } = router.query;
 
-  //   useEffect(() => {
-  //     setSelectedArtPiece(pieces.find((piece) => piece.slug === slug));
-  //   }, [setSelectedArtPiece, pieces, slug]);
+  useEffect(() => {
+    setSelectedArtPiece(pieces.find((piece) => piece.slug === slug));
+  }, [setSelectedArtPiece, pieces, slug]);
 
-  //   useEffect(() => {
-  //     let timeoutId;
-  //     if (!selectedArtPiece) {
-  //       timeoutId = setTimeout(() => router.push("/404"), 3000);
-  //     }
+  useEffect(() => {
+    let timeoutId;
+    if (!selectedArtPiece) {
+      timeoutId = setTimeout(() => router.push("/404"), 3000);
+    }
 
-  //     return () => clearTimeout(timeoutId);
-  //   }, [selectedArtPiece, router]);
+    return () => clearTimeout(timeoutId);
+  }, [selectedArtPiece, router]);
 
-  //   if (!selectedArtPiece) {
-  //     return null;
-  //   }
+  if (!selectedArtPiece) {
+    return null;
+  }
 
   return (
     <ArtPiecesDetails
