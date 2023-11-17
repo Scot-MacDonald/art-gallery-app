@@ -1,27 +1,30 @@
-import Image from "next/image";
+export default function FavoriteButton({
+  isFavorite,
+  onToggleFavorite,
+  positionAbsolute = false,
+}) {
+  const buttonStyles = {
+    position: positionAbsolute ? "absolute" : "static",
+    right: "1rem",
+    top: "1.5rem",
+    zIndex: 1,
 
-// const FavoriteButton = ({ isFavorite, onToggleFavorite, slug }) => {
-//   return (
-//     <button
-//       type="button"
-//       onClick={() => onToggleFavorite(slug)}
-//       aria-label={isFavorite ? "unlike" : "like"}
-//     >
-//       <Image src={"/assets/heart.svg"} width={40} height={40} alt="" />
-//     </button>
-//   );
-// };
-// export default FavoriteButton;
+    borderRadius: "50%",
+    display: "grid",
+    placeItems: "center",
+    // font-size: "xx-large",
+    border: "none",
+    background: "none",
+  };
 
-export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
   return (
     <button
       type="button"
       onClick={onToggleFavorite}
-      $isFavorite={isFavorite}
+      style={buttonStyles}
       aria-label={isFavorite ? "unlike" : "like"}
     >
-      <Image src="/assets/heart.svg" width={40} height={40} alt="" />
+      {isFavorite ? "❤️" : "🖤"}
     </button>
   );
 }
