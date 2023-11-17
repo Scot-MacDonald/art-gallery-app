@@ -8,10 +8,11 @@ export default function Spotlight({
   slug,
   isFavorite,
   onToggleFavorite,
+  title,
 }) {
   return (
     <div className={styles.spotlight}>
-      <Image src={image} width={600} height={400}></Image>
+      <Image src={image} width={600} height={400} alt={title}></Image>
       <h2 className={styles.spotlight}>{artist}</h2>
       <FavoriteButton
         isFavorite={isFavorite}
