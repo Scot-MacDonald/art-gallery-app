@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import CommentForm from "../CommentForm/CommentForm";
+import Comments from "../Comments/Comments";
 
 export default function ArtPieceDetails({
   image,
@@ -10,6 +12,8 @@ export default function ArtPieceDetails({
   genre,
   isFavorite,
   onToggleFavorite,
+  onSubmitComment,
+  comments,
 }) {
   return (
     <div>
@@ -23,6 +27,8 @@ export default function ArtPieceDetails({
         isFavorite={isFavorite}
         onToggleFavorite={onToggleFavorite}
       />
+      {comments && <Comments comments={comments} />}
+      <CommentForm onSubmitComment={onSubmitComment} />
       <button>
         <Link href={`/art-pieces`}>Go Back</Link>
       </button>
