@@ -1,10 +1,6 @@
-//imported uselocalstoragestat and using that instead of immer just to get the app to show images line 7, 22
-//also commented out the useimmerlocalstoragestate.js in the lib/hook
-
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import Layout from "../components/layout/layout";
-import { useImmerLocalStorageState } from "../lib/hook/useImmerLocalStorageState.js";
 import useLocalStorageState from "use-local-storage-state";
 
 const fetcher = async (...args) => {
@@ -40,9 +36,27 @@ export default function App({ Component, pageProps }) {
     }
   }
 
-  //   if (!data) {
-  //     return;
-  //   }
+  function onSubmitComment(slug, newComment) {
+    const artPiece = artPiecesInfo.find((piece) => piece.slug === slug);
+    if (artPiece) {
+      setArtPiecesInfo(
+        artPiecesInfo.map((pieceInfo) => {
+          if (pieceInfo.slug === slug) {
+            return pieceInfo.comments
+              ? { ...pieceInfo, comments: [...pieceInfo.comments, newComment] }
+              : { ...pieceInfo, comments: [newComment] };
+          } else {
+            return pieceInfo;
+          }
+        })
+      );
+    } else {
+      setArtPiecesInfo([
+        ...artPiecesInfo,
+        { slug, isFavorite: false, comments: [newComment] },
+      ]);
+    }
+  }
 
   return (
     <Layout>
@@ -52,6 +66,7 @@ export default function App({ Component, pageProps }) {
         pieces={isLoading || error ? [] : data}
         artPiecesInfo={artPiecesInfo}
         onToggleFavorite={handleToggleFavorite}
+        onSubmitComment={onSubmitComment}
       />
     </Layout>
   );
