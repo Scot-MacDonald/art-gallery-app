@@ -9,9 +9,10 @@ test("renders an artist name", () => {
 });
 
 test("renders an image of the spotlight art", () => {
-  render(<Spotlight />);
+  render(<Spotlight title="Orange Red and Green Abstract Painting" />);
 
-  const spotlightImage = screen.getAllByAltText(
+  const spotlightImage = screen.getByAltText(
     "Orange Red and Green Abstract Painting"
   );
+  expect(spotlightImage).toBeInTheDocument();
 });
