@@ -1,4 +1,7 @@
 .favoriteButton {
   border: none;
   background-color: transparent;
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
 }

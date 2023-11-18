@@ -6,8 +6,9 @@ export default function Nav({ pieces }) {
     <>
       <nav className={styles.nav}>
         <Link href={"/art-pieces"}>Art Pieces</Link>
-        <Link href={"/"}>SpotlightPage</Link>
+        <Link href={"/"}>Spotlight</Link>
         <Link href={"/favorites"}>Favorites</Link>
+        <Link href={"/favorites"}></Link>
       </nav>
     </>
   );

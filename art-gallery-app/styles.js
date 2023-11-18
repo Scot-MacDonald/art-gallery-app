@@ -10,7 +10,11 @@ export default createGlobalStyle`
   body {
     margin: 0;
     font-family: system-ui;
-    background:#dedcd0;
+    background: linear-gradient(90deg, #0000 calc(100% - 1px), lightgray 0);
+    background-size: auto;
+  background-size: calc((100% - 3*3px)/4 + 1px) 100%;
+    
+    
   }
 
   * {
@@ -19,9 +23,15 @@ export default createGlobalStyle`
 
   img {
     filter: grayscale(100%);
+    
   }
   
- 
+ h1{
+  text-align: center;
+  font-size: 150px;
+  margin: 0;
+  padding-bottom: 30px;
+ }
 
 .art-pieces-list{
   display: flex;
