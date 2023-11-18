@@ -13,11 +13,14 @@ export default function FavoritesPage({
   );
 
   return (
-    <ArtPieces
-      pieces={favorites}
-      onArtPiecesInfo={onArtPiecesInfo}
-      artPiecesInfo={artPiecesInfo}
-      onToggleFavorite={onToggleFavorite}
-    />
+    <>
+      <h1>FAVOURITES</h1>
+      <ArtPieces
+        pieces={favorites}
+        onArtPiecesInfo={onArtPiecesInfo}
+        artPiecesInfo={artPiecesInfo}
+        onToggleFavorite={onToggleFavorite}
+      />
+    </>
   );
 }

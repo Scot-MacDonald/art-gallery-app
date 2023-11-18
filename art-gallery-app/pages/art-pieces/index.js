@@ -7,11 +7,14 @@ export default function ArtPiecesPage({
   onToggleFavorite,
 }) {
   return (
-    <ArtPieces
-      pieces={pieces}
-      onArtPiecesInfo={onArtPiecesInfo}
-      artPiecesInfo={artPiecesInfo}
-      onToggleFavorite={onToggleFavorite}
-    />
+    <>
+      <h1>ART PIECES</h1>
+      <ArtPieces
+        pieces={pieces}
+        onArtPiecesInfo={onArtPiecesInfo}
+        artPiecesInfo={artPiecesInfo}
+        onToggleFavorite={onToggleFavorite}
+      />
+    </>
   );
 }

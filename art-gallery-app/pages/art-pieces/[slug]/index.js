@@ -34,22 +34,24 @@ export default function ArtPieceDetailsPage({
   }
 
   return (
-    <ArtPiecesDetails
-      onBack={() => router.back()}
-      image={selectedArtPiece.imageSource}
-      title={selectedArtPiece.name}
-      artist={selectedArtPiece.artist}
-      year={selectedArtPiece.year}
-      genre={selectedArtPiece.genre}
-      isFavorite={
-        artPiecesInfo.find((piece) => piece.slug === selectedArtPiece.slug)
-          ?.isFavorite
-      }
-      onToggleFavorite={() => onToggleFavorite(selectedArtPiece.slug)}
-      comments={selectedArtPieceComments}
-      onSubmitComment={(newComment) =>
-        onSubmitComment(selectedArtPiece.slug, newComment)
-      }
-    />
+    <>
+      <ArtPiecesDetails
+        onBack={() => router.back()}
+        image={selectedArtPiece.imageSource}
+        title={selectedArtPiece.name}
+        artist={selectedArtPiece.artist}
+        year={selectedArtPiece.year}
+        genre={selectedArtPiece.genre}
+        isFavorite={
+          artPiecesInfo.find((piece) => piece.slug === selectedArtPiece.slug)
+            ?.isFavorite
+        }
+        onToggleFavorite={() => onToggleFavorite(selectedArtPiece.slug)}
+        comments={selectedArtPieceComments}
+        onSubmitComment={(newComment) =>
+          onSubmitComment(selectedArtPiece.slug, newComment)
+        }
+      />
+    </>
   );
 }
