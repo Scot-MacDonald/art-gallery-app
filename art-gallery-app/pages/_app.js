@@ -3,6 +3,10 @@ import useSWR from "swr";
 import Layout from "../components/layout/layout";
 import useLocalStorageState from "use-local-storage-state";
 
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
 const fetcher = async (...args) => {
   const response = await fetch(...args);
   if (!response.ok) {

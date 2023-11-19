@@ -13,7 +13,7 @@ export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
       <FontAwesomeIcon
         icon={faHeart}
         style={{ color: isFavorite ? "#f4cae2" : "black" }}
-      />{" "}
+      />
     </button>
   );
 }
