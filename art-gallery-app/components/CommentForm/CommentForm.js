@@ -12,7 +12,13 @@ export default function CommentForm({ onSubmitComment }) {
       <label htmlFor="comment">
         <h2>Comment:</h2>
       </label>
-      <textarea type="test" name="comment" id="comment" rows="5" />
+      <textarea
+        className={styles.textarea}
+        type="test"
+        name="comment"
+        id="comment"
+        rows="5"
+      />
       <button className={styles.bt} type="submit">
         Send
       </button>
