@@ -36,7 +36,6 @@ export default function ArtPieceDetailsPage({
   return (
     <>
       <ArtPiecesDetails
-        onBack={() => router.back()}
         image={selectedArtPiece.imageSource}
         title={selectedArtPiece.name}
         artist={selectedArtPiece.artist}

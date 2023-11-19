@@ -19,7 +19,7 @@ export default function ArtPieceDetails({
   return (
     <div className={styles.spotlight}>
       <h1>Art Details</h1>
-      <Image src={image} alt="image name" width={600} height={400} />
+      <Image src={image} alt="image name" width={760} height={400} />
       <div className={styles.footer}>
         <h2 className={styles.artist}>{artist}</h2>
         <FavoriteButton
@@ -28,14 +28,15 @@ export default function ArtPieceDetails({
         />
       </div>
       <div className={styles.footer}>
-        <h2>{year}</h2>
         <h2>{genre}</h2>
+        <h2>{year}</h2>
       </div>
-      {comments && <Comments comments={comments} />}
+      <Link className={styles.bt} href={`/art-pieces`}>
+        Back
+      </Link>
+
       <CommentForm onSubmitComment={onSubmitComment} />
-      <button>
-        <Link href={`/art-pieces`}>Go Back</Link>
-      </button>
+      {comments && <Comments comments={comments} />}
     </div>
   );
 }
