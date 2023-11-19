@@ -1,38 +1,24 @@
-/* .article {
-  display: flex;
-  justify-content: center;
+.comments {
+  width: 760px;
+  color: #f4cae2;
 }
-
-.favoriteButton {
-  font-size: 50px;
+.comments li {
+  padding: 0;
+  margin: 0;
 }
-*/
-.image {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.spotlight {
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 0px;
 }
 
 .footer {
   display: flex;
-  align-items: center;
   justify-content: center;
   justify-content: space-between;
   width: 760px;
 }
-.footers {
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-  width: 760px;
-  margin-top: 40px;
-}
+
 .bt {
   text-align: left;
   color: black;
@@ -53,10 +39,4 @@
   border: 1px solid black;
   color: white;
   cursor: pointer;
-}
-
-.artist {
-  font-size: 2vw;
-  color: #f4cae2;
-  text-transform: capitalize;
 }

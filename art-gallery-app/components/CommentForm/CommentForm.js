@@ -1,3 +1,5 @@
+import styles from "@/styles/comments.module.css";
+import Link from "next/link";
 export default function CommentForm({ onSubmitComment }) {
   function handleSubmit(e) {
     e.preventDefault();
@@ -6,13 +8,14 @@ export default function CommentForm({ onSubmitComment }) {
     e.target.reset();
   }
   return (
-    <form
-      onSubmit={handleSubmit}
-      aria-label="how does this 'art' make you feel.."
-    >
-      <label htmlFor="comment">leave a comment:</label>
-      <textarea type="test" name="comment" id="comment" rows="1" />
-      <button type="submit">Send</button>
+    <form className={styles.form} onSubmit={handleSubmit} aria-label="art">
+      <label htmlFor="comment">
+        <h2>Comment:</h2>
+      </label>
+      <textarea type="test" name="comment" id="comment" rows="5" />
+      <button className={styles.bt} type="submit">
+        Send
+      </button>
     </form>
   );
 }

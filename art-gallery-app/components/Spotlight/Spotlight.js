@@ -13,7 +13,7 @@ export default function Spotlight({
     <div className={styles.spotlight}>
       <h1>SPOTLIGHT</h1>
 
-      <Image src={image} width={600} height={400}></Image>
+      <Image src={image} width={760} height={400}></Image>
       <div className={styles.footer}>
         <h2 className={styles.artist}>{artist}</h2>
         <FavoriteButton

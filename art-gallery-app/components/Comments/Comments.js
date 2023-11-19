@@ -1,11 +1,13 @@
+import styles from "@/styles/comments.module.css";
+
 export default function Comments({ comments }) {
   return (
-    <div>
-      <h1>Comment</h1>
+    <div className={styles.comments}>
+      <h2>Comments</h2>
       <ul>
         {comments.map((comment, index) => (
           <li key={index}>
-            <p>{comment}</p>
+            <h3 className={styles.comments}>{comment}</h3>
           </li>
         ))}
       </ul>

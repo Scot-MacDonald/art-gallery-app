@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/styles/ArtPiecePreview.module.css";
+import styles from "@/styles/Spotlight.module.css";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 export default function ArtPiecePreview({
@@ -14,15 +14,18 @@ export default function ArtPiecePreview({
 }) {
   return (
     <>
-      <Image src={image} alt={title} width={600} height={400}></Image>
+      <Image src={image} alt={title} width={760} height={400}></Image>
+      <div className={styles.footer}>
+        <h2 className={styles.artist}>{artist}</h2>
+        <FavoriteButton
+          isFavorite={isFavorite}
+          onToggleFavorite={onToggleFavorite}
+        />
+      </div>
       <h2>{title}</h2>
-      <p>{artist}</p>
-      <FavoriteButton
-        isFavorite={isFavorite}
-        onToggleFavorite={onToggleFavorite}
-        slug={slug}
-      />
-      <Link href={`/art-pieces/${slug}`}>click for more</Link>
+      <Link className={styles.bt} href={`/art-pieces/${slug}`}>
+        More Details
+      </Link>
     </>
   );
 }
