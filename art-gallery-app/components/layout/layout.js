@@ -1,4 +1,4 @@
-import Nav from "../Nav/nav";
+import Nav from "@/components/Nav/Nav";
 import styles from "@/styles/ArtPiecePreview.module.css";
 
 const RootLayout = ({ children }) => {
